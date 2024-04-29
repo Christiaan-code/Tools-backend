@@ -1,5 +1,5 @@
 import { CryptoHandler } from "./CryptoHandler";
-import './env.config'
+import './env.config';
 import { IEncryptData } from "./models";
 
 const express = require('express')
@@ -13,6 +13,7 @@ app.use(cors())
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.json({ message: 'API is working' }))
+app.get('/status', (req, res) => res.json({ message: 'API is working' }))
 
 app.post('/decrypt', (req, res) => {
   try{
